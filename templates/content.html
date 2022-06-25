@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        var stretchNames= {{names | tojson}}
         var muscleStretches = {{stretchesArr | tojson }}
 
         console.log(muscleStretches)
@@ -13,6 +14,10 @@
         function populateContent(){
             for(let i=0;i<muscleStretches.length;i++){
                 console.log(muscleStretches[i])
+                let bulletPoint=document.createElement("li")
+                bulletPoint.innerText=muscleStretches[i]
+                document.body.appendChild(bulletPoint)
+                // Append image of stretch
             }
         }
     </script>

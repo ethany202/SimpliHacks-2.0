@@ -37,7 +37,8 @@ def get_stretches(group):
     conn.close_connection() #close connection
 
     stretches_lst=parse_rows(viable_stretches)
-    return render_template("content.html", stretchesArr=stretches_lst)
+    stretch_names=parse_muscles(muscles)
+    return render_template("content.html", names=stretch_names, stretchesArr=stretches_lst)
 
 def parse_rows(rows):
     arrTemplate=[]
@@ -50,6 +51,12 @@ def parse_rows(rows):
         desc_lst.append(stretches_dict[str(stretches)])
     
     return desc_lst
+
+def parse_muscles(rows):
+    arrTemplate=[]
+    for index in rows:
+        arrTempalte.append(index[0])
+    return arrTemplate
 
 if __name__ == "__main__":
     app.run(debug=True)
