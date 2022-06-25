@@ -1,108 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recovery Lab | {{muscle_group}}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin&display=swap"
+      rel="stylesheet"
+    />
     <script>
-        var stretchNames= {{names | tojson}}
-        var muscleStretches = {{stretchesArr | tojson }}
-        var info=document.getElementById("info")
+      var stretchNames= {{names | tojson}}
+      var muscleStretches = {{stretchesArr | tojson }}
+      var info=document.getElementById("info")
 
-        console.log(muscleStretches)
+      console.log(muscleStretches)
 
-        function populateContent(){
-            for(let i=0;i<muscleStretches.length;i++){
-                console.log(muscleStretches[i])
-                let bulletPoint=document.createElement("li")
-                bulletPoint.innerText=muscleStretches[i]
+      function populateContent(){
+          for(let i=0;i<muscleStretches.length;i++){
+              console.log(muscleStretches[i])
+              let bulletPoint=document.createElement("li")
+              bulletPoint.innerText=muscleStretches[i]
 
-                var info=document.getElementById("info")
-                info.appendChild(bulletPoint)
-                // Append image of stretch (let stretchImg=)
+              var info=document.getElementById("info")
+              info.appendChild(bulletPoint)
+              // Append image of stretch (let stretchImg=)
 
-                let stretchImg=document.createElement("div")
-                stretchImg.className="image"
-                stretchImg.style.backgroundImage="url('../static/pictures/"+stretchNames[i]+".jpg')"
-                stretchImg.style.width="15vw"
-                stretchImg.style.height="15vw"
-                console.log(stretchImg.backgroundImage)
-                info.appendChild(stretchImg)
-            }
-        }
+              let stretchImg=document.createElement("div")
+              stretchImg.className="image"
+              stretchImg.style.backgroundImage="url('../static/pictures/"+stretchNames[i]+".jpg')"
+              stretchImg.style.width="25vw"
+              stretchImg.style.height="25vw"
+              console.log(stretchImg.backgroundImage)
+              info.appendChild(stretchImg)
+          }
+      }
 
-        function getImageSizes(){
+      function getImageSizes(){
 
-        }
+      }
 
-        function returnHome(){
-            window.location.href="home"
-        }
+      function returnHome(){
+          window.location.href="home"
+      }
     </script>
-</head>
-<body onload="populateContent()">
+  </head>
+  <body onload="populateContent()">
     <div id="page">
-        <h1> <span>{{muscle_group}}</span></h1>
-        <div id="info">
-        </div>
-      </div>
-    <div id="back-button">
-        <button onclick="returnHome()">HOME</button>
+      <h1><span>{{muscle_group}}</span></h1>
+      <div id="info"></div>
     </div>
-</body>
-<style>
-    body{
-        font-family: 'Anek Latin', sans-serif;
+    <div id="back-button">
+      <button onclick="returnHome()">HOME</button>
+    </div>
+  </body>
+  <style>
+    body {
+      font-family: "Anek Latin", sans-serif;
     }
 
     #page {
-      margin:1.5% 5%;
-      border:none;
-      padding:1%;
+      margin: 1.5% 5%;
+      border: none;
+      padding: 1%;
       letter-spacing: 0.075vw;
       /* text-align:center; */
     }
-    h1{
-      margin-bottom:7.5%;
+    h1 {
+      margin-bottom: 7.5%;
       letter-spacing: 0.15vw;
       font-size: 3.5vw;
     }
 
-    #back-button{
-        text-align: center;
-    }
-    
-    #info{
-        padding: 0.5%;
-        font-size:1vw;
-        margin: 1%;
-        text-align: center;
+    #back-button {
+      text-align: center;
     }
 
-    .image{
-        text-align: center;
+    #info {
+      padding: 0.5%;
+      font-size: 1vw;
+      margin: 1%;
+      text-align: center;
     }
 
-    button{
-        text-align: center;
-        margin:2%;
-        border: none;
-        color: black;
-        background-color: white;
-        font-size: 1vw;
-        letter-spacing: 0.1vw;
-        padding: 1%;
-        border-radius: 5%;
+    .image {
+      text-align: center;
+      background-size: cover;
+      background-position-y: 50%;
     }
 
-    button:hover{
-        cursor: pointer;
-        color: white;
-        background-color: black;
+    button {
+      text-align: center;
+      margin: 2%;
+      border: none;
+      color: black;
+      background-color: white;
+      font-size: 1vw;
+      letter-spacing: 0.1vw;
+      padding: 1%;
+      border-radius: 5%;
+    }
+
+    button:hover {
+      cursor: pointer;
+      color: white;
+      background-color: black;
     }
   </style>
 </html>
