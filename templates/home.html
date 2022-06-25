@@ -5,21 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recovery Lab | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="../static/js/home.js" defer></script>
   </head>
   <body>
     <div class="container" onclick="released()">
       <!--Header-->
       <header>
-        <h1>Website Name</h1>
+        <div class="background">
+          <h1 class="title">Recovery Lab</h1>
+        </div>
       </header>
 
       <!--About Us-->
       <section class="about">
         <h2>About Us</h2>
         <p>
-          Built by a team of three, Recovery Lab is a website letting users search for stretches to exercise certain muscle groups to keep them healthy, prevent future injuries
-          and handle soreness.
+          Built by a team of three, Recovery Lab is a website letting users
+          search for stretches to exercise certain muscle groups to keep them
+          healthy, prevent future injuries and handle soreness.
         </p>
       </section>
 
@@ -27,10 +36,10 @@
       <section class="stretch">
         <!--Search Input-->
         <div class="search">
-          <label for="search">Search Users</label>
           <input
             type="search"
             id="search"
+            placeholder="SEARCH MUSCLE GROUP"
             onkeyup="user_search()"
             onclick="clicked()"
           />
@@ -40,42 +49,90 @@
         <div class="results">
           <div class="result"><a href="muscle-group=chest">Chest</a></div>
           <div class="result"><a href="muscle-group=neck">Neck</a></div>
-          <div class="result"><a href="muscle-group=lower_back">Lower Back</a></div>
-          <div class="result"><a href="muscle-group=upper_arms">Upper Arms</a></div>
-          <div class="result"><a href="muscle-group=lower_arms">Lower Arms</a></div>
-          <div class="result"><a href="muscle-group=trapezius">Trapezius</a></div>
-          <div class="result"><a href="muscle-group=latissimus_dorsi">Latissimus Dorsi</a></div>
-          <div class="result"><a href="muscle-group=gluteal_muscles">Gluteal Muscles</a></div>
-          <div class="result"><a href="muscle-group=upper_legs">Upper Legs</a></div>
-          <div class="result"><a href="muscle-group=lower_legs">Lower Legs</a></div>
-          <div class="result"><a href="muscle-group=abdominals">Abdominals</a></div>
-        </div>
-
-        <!--Figure-->
-        <div class="figure">
-          <img src="" alt="Human Muscle Figure" />
+          <div class="result">
+            <a href="muscle-group=lower_back">Lower Back</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=upper_arms">Upper Arms</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=lower_arms">Lower Arms</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=trapezius">Trapezius</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=latissimus_dorsi">Latissimus Dorsi</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=gluteal_muscles">Gluteal Muscles</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=upper_legs">Upper Legs</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=lower_legs">Lower Legs</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=abdominals">Abdominals</a>
+          </div>
         </div>
       </section>
     </div>
   </body>
   <style>
+    /*
     header {
+      color: black;
       text-align: center;
       height: 50vh;
       border-style: solid;
-      margin-left: 0;
-      margin-right: 0;
+      background-image: url(images/stretch.jpg);
     }
     header h1 {
+      color: black;
       vertical-align: center;
+    }*/
+
+    body {
+      font-family: "Anek Latin", sans-serif;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 4vw;
+    }
+
+    header {
+      right: 0;
+      left: 0;
+    }
+
+    .background {
+      /*background-size: cover;*/
+      /*background-position-y: 60%;*/
+      height: 30vh;
+    }
+
+    .title {
+      padding-top: 50px;
+      color: black;
+      text-align: center;
     }
 
     .about {
       text-align: center;
-      border-style: solid;
-      border-color: blue;
       margin-left: 3rem;
       margin-right: 3rem;
+      padding: 1em;
+    }
+
+    .stretch {
+      padding: 1.5em;
     }
 
     .search {
@@ -87,10 +144,17 @@
 
     input {
       font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.1rem;
+    }
+    input:placeholder-shown {
+      font-style: italic;
+      font-size: 0.9rem;
     }
 
     .results {
       display: grid;
+      list-style: none;
     }
 
     .result {
@@ -106,10 +170,6 @@
     }
     .result a:hover {
       background: rgb(170, 170, 170);
-    }
-
-    .figure {
-      margin-top: 300px;
-    }/*# sourceMappingURL=home.css.map */
+    } /*# sourceMappingURL=home.css.map */
   </style>
 </html>
