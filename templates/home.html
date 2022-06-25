@@ -28,6 +28,7 @@
         <!--Search Input-->
         <div class="search">
           <input
+            autocomplete="off"
             type="search"
             id="search"
             placeholder="SEARCH MUSCLE GROUP"
@@ -105,8 +106,8 @@
     }
 
     #body-img{
-      border-width: 0.2rem;
-      border-style:solid;
+      border-width: 0.2vw;
+      border-style: solid;
       border-color: #67B8A9;
       border-radius: 1%;
     }
@@ -126,8 +127,8 @@
       height: 30vh;
     }
     .title {
-      padding-top: 40px;
-      padding-bottom: 20px;
+      padding-top: 2vw;
+      padding-bottom: 1vw;
       color: white;
       text-align: center;
       border-bottom:solid;
@@ -138,17 +139,14 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      padding-left: 4px;
-      padding-right: 4px;
-      padding-bottom: 4px;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      padding-bottom: 0.5vw;
       position:fixed;
       bottom:0px;
       width:100%;
       font-size:15px;
       color: #343633
-    }
-    .stretch {
-      /*padding: 1.5em;*/
     }
     .search {
       display: flex;
@@ -159,6 +157,7 @@
       margin-right: 2rem;
       margin-top: 10px;
       text-align:center;
+      font-size: 0.5vw;
     }
     input {
       font-size: 1rem;
@@ -170,6 +169,7 @@
       font-size: 0.9rem;
     }
     .results {
+      font-size: 0.8vw;
       display: grid;
       list-style: none;
     }
