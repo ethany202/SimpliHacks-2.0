@@ -19,18 +19,9 @@
       <header>
         <div class="background">
           <h1 class="title">Recovery Lab</h1>
+          <img id = "body-img" src="https://i.pinimg.com/originals/12/c5/a9/12c5a975f0370bf2a8d8502a14a721b5.jpg" alt="Anatomical Man" class="center">
         </div>
       </header>
-
-      <!--About Us-->
-      <section class="about">
-        <h2>About Us</h2>
-        <p>
-          Built by a team of three, Recovery Lab is a website letting users
-          search for stretches to exercise certain muscle groups to keep them
-          healthy, prevent future injuries and handle soreness.
-        </p>
-      </section>
 
       <!--Stretch-->
       <section class="stretch">
@@ -78,22 +69,31 @@
           </div>
         </div>
       </section>
+
     </div>
+    <!--About Us-->
+    <footer class="about">
+      <h2>About Us</h2>
+      <p>
+        Built by a team of three, Recovery Lab is a website letting users
+        search for stretches to exercise certain muscle groups to keep them
+        healthy, prevent future injuries and handle soreness.
+      </p>
+    </footer>
   </body>
   <style>
-    /*
-    header {
-      color: black;
-      text-align: center;
-      height: 50vh;
-      border-style: solid;
-      background-image: url(images/stretch.jpg);
+    .container{
+      margin: auto;
+      width:60%;
+      min-width: 950px;
+      max-width: 1600px;
     }
-    header h1 {
-      color: black;
-      vertical-align: center;
-    }*/
-
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width:100%;
+    }
     body {
       font-family: "Anek Latin", sans-serif;
       margin: 0;
@@ -101,79 +101,92 @@
       border: 0;
       vertical-align: baseline;
       text-transform: uppercase;
+      background-color:#343633;
     }
 
+    #body-img{
+      border-width: 0.2rem;
+      border-style:solid;
+      border-color: #67B8A9;
+      border-radius: 1%;
+    }
     h1 {
-      font-size: 4vw;
+      font-size: 70px;
     }
-
+    h2{
+      font-size: 20px;
+    }
     header {
       right: 0;
       left: 0;
     }
-
     .background {
-      /*
-      background-size: cover;
-      background-position-y: 60%;
-      */
+      /*background-size: cover;*/
+      /*background-position-y: 60%;*/
       height: 30vh;
     }
-
     .title {
-      padding-top: 5%;
-      color: black;
+      padding-top: 40px;
+      padding-bottom: 20px;
+      color: white;
       text-align: center;
+      border-bottom:solid;
+      border-bottom-width: 4px;
     }
-
     .about {
+      background-color:#67B8A9;
       text-align: center;
-      margin-left: 3rem;
-      margin-right: 3rem;
-      padding: 1em;
-      font-size: 0.8vw;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 4px;
+      padding-right: 4px;
+      padding-bottom: 4px;
+      position:fixed;
+      bottom:0px;
+      width:100%;
+      font-size:15px;
+      color: #343633
     }
-
     .stretch {
-      padding: 1.5em;
+      /*padding: 1.5em;*/
     }
-
     .search {
       display: flex;
+      width:auto;
       flex-direction: column;
       gap: 0.25rem;
-      margin-top: 1%;
-      font-size: 0.5vw;
+      margin-left: 2rem;
+      margin-right: 2rem;
+      margin-top: 10px;
+      text-align:center;
     }
-
     input {
-      font-size: 0.77vw;
-      padding: 0.5%;
-      border-radius: 0.1rem;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border: solid 10% #343633;
     }
     input:placeholder-shown {
       font-style: italic;
       font-size: 0.9rem;
     }
-
     .results {
       display: grid;
       list-style: none;
     }
-
     .result {
-      border: 10% solid black;
       background-color: white;
+      margin-left: 2rem;
+      margin-right: 2rem;
       display: none;
     }
     .result a {
       text-decoration: none;
-      color: black;
+      color: #343633;
       display: block;
       padding: 0.3em;
     }
     .result a:hover {
-      background: black;
+      background: #67B8A9;
       color: white;
     } /*# sourceMappingURL=home.css.map */
   </style>
