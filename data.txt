@@ -1,0 +1,23 @@
+behind-the-back arm pull,chest
+wall-assisted arm pull,chest
+neck roll,neck
+shoulder roll,neck
+child's pose,lower_back
+cow pose,lower_back
+cobra pose,lower_back,
+overhead stretch,upper_arms
+standing biceps stretch,upper_arms
+wrist pull,lower_arms
+wall press,trapezius
+cobra pose,trapezius
+active floor stretch,latissimus_dorsi
+overhead stretch,latissimus_dorsi
+seated-leg stretch,gluteal_muscles
+raised-leg stretch,gluteal_muscles
+standing quad stretch,upper_legs
+lunges,upper_legs
+standing hamstring stretch,upper_legs
+tip-toe stretch,lower_legs
+wall-assisted foot stretch,lower_legs
+cobra pose,abdominals
+cat-cow stretch,abdominals
