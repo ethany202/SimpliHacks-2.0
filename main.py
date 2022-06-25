@@ -37,7 +37,7 @@ def get_stretches(group):
     conn.close_connection() #close connection
 
     stretches_lst=parse_rows(viable_stretches)
-    stretch_names=parse_muscles(muscles)
+    stretch_names=parse_muscles(viable_stretches)
 
     try:
         group=group.replace("_"," ")
@@ -60,7 +60,11 @@ def parse_rows(rows):
 def parse_muscles(rows):
     arrTemplate=[]
     for index in rows:
-        arrTemplate.append(index[0])
+        try:
+            arrTemplate.append(index[0].replace(" ","_"))
+        except Exception as e:
+            arrTemplate.append(index[0])
+    print(arrTemplate)
     return arrTemplate
 
 if __name__ == "__main__":
