@@ -1,3 +1,4 @@
+from ast import parse
 from flask import Flask, redirect, url_for, render_template, request
 from retrieve_data import RetrieveData
 
@@ -14,16 +15,24 @@ def home():
 
 @app.route('/muscle-group=<group>')
 def get_stretches(group):
+    # Initiate connection thru object
     conn = RetrieveData()
     conn.connect()
 
+    # Retrieve necessary rows
     viable_stretches=conn.check_stretches(group)
     muscles=conn.check_muscles(group)
 
     conn.close_connection() #close connection
 
-    return render_template("content.html", stretchesArr="overhead stretch")
+    stretches_lst=parse_rows(viable_stretches)
+    return render_template("content.html", stretchesArr=stretches_lst)
 
+def parse_rows(rows):
+    arrTemplate=[]
+    for index in rows:
+        arrTemplate.append(index[0])
+    return arrTemplate
 
 if __name__ == "__main__":
     app.run(debug=True)
