@@ -60,10 +60,17 @@ def parse_rows(rows):
 def parse_muscles(rows):
     arrTemplate=[]
     for index in rows:
+        stretchName=""
         try:
-            arrTemplate.append(index[0].replace(" ","_"))
+            stretchName=index[0].replace("'","")
         except Exception as e:
-            arrTemplate.append(index[0])
+            stretchName=index[0]
+
+        try:
+            stretchName=stretchName.replace(" ","_")
+        except Exception as e:
+            stretchName=stretchName
+        arrTemplate.append(stretchName)
     print(arrTemplate)
     return arrTemplate
 
