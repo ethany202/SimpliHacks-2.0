@@ -26,8 +26,12 @@
                 // Append image of stretch (let stretchImg=)
 
                 let stretchImg=document.createElement("div")
-                //stretchImg.style.backgroundImage="url('../static/pictures/"+stretchNames[i]+".png')"
-
+                stretchImg.className="image"
+                stretchImg.style.backgroundImage="url('../static/pictures/"+stretchNames[i]+".jpg')"
+                stretchImg.style.width="15vw"
+                stretchImg.style.height="15vw"
+                console.log(stretchImg.backgroundImage)
+                info.appendChild(stretchImg)
             }
         }
 
@@ -76,6 +80,11 @@
         padding: 0.5%;
         font-size:1vw;
         margin: 1%;
+        text-align: center;
+    }
+
+    .image{
+        text-align: center;
     }
 
     button{
