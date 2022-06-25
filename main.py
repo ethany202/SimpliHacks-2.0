@@ -55,7 +55,7 @@ def parse_rows(rows):
 def parse_muscles(rows):
     arrTemplate=[]
     for index in rows:
-        arrTempalte.append(index[0])
+        arrTemplate.append(index[0])
     return arrTemplate
 
 if __name__ == "__main__":

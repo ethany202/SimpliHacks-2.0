@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recovery Lab | Home</title>
     <script src="../static/js/home.js" defer></script>
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/home.scss" />
   </head>
   <body>
     <div class="container" onclick="released()">
@@ -39,24 +39,17 @@
 
         <!--Search Results-->
         <div class="results">
-          <div class="result">
-            <a href="https://sites.google.com">Chest</a>
-          </div>
-          <div class="result">
-            <a
-              href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_trim"
-              >Neck</a
-            >
-          </div>
-          <div class="result"><a href="#">Lower Back</a></div>
-          <div class="result"><a href="#">Upper Arms</a></div>
-          <div class="result"><a href="#">Lower Arms</a></div>
-          <div class="result"><a href="#">Trapezius</a></div>
-          <div class="result"><a href="#">Lats</a></div>
-          <div class="result"><a href="#">Glutes</a></div>
-          <div class="result"><a href="#">Upper Legs</a></div>
-          <div class="result"><a href="#">Lower Legs</a></div>
-          <div class="result"><a href="#">Abs</a></div>
+          <div class="result"><a href="muscle-group=chest">Chest</a></div>
+          <div class="result"><a href="muscle-group=neck">Neck</a></div>
+          <div class="result"><a href="muscle-group=lower_back">Lower Back</a></div>
+          <div class="result"><a href="muscle-group=upper_arms">Upper Arms</a></div>
+          <div class="result"><a href="muscle-group=lower_arms">Lower Arms</a></div>
+          <div class="result"><a href="muscle-group=trapezius">Trapezius</a></div>
+          <div class="result"><a href="muscle-group=latissimus_dorsi">Latissimus Dorsi</a></div>
+          <div class="result"><a href="muscle-group=gluteal_muscles">Gluteal Muscles</a></div>
+          <div class="result"><a href="muscle-group=upper_legs">Upper Legs</a></div>
+          <div class="result"><a href="muscle-group=lower_legs">Lower Legs</a></div>
+          <div class="result"><a href="muscle-group=abdominals">Abdominals</a></div>
         </div>
 
         <!--Figure-->
@@ -66,4 +59,58 @@
       </section>
     </div>
   </body>
+  <style>
+    header {
+      text-align: center;
+      height: 50vh;
+      border-style: solid;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    header h1 {
+      vertical-align: center;
+    }
+
+    .about {
+      text-align: center;
+      border-style: solid;
+      border-color: blue;
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    .search {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-top: 10px;
+    }
+
+    input {
+      font-size: 1rem;
+    }
+
+    .results {
+      display: grid;
+    }
+
+    .result {
+      border: 1px solid black;
+      background-color: white;
+      display: none;
+    }
+    .result a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 0.3em;
+    }
+    .result a:hover {
+      background: rgb(170, 170, 170);
+    }
+
+    .figure {
+      margin-top: 300px;
+    }/*# sourceMappingURL=home.css.map */
+  </style>
 </html>
