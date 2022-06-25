@@ -1,8 +1,3 @@
-function addEvent(muscleName) {
-    window.location.href="https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_trim"
-    console.log(muscleName);
-}
-
 var click = false;
 function clicked() {
     click = true;
