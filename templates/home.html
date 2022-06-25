@@ -5,16 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recovery Lab | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="../static/js/home.js" defer></script>
   </head>
   <body>
     <div class="container" onclick="released()">
       <!--Header-->
       <header>
-        <div
-          class="background"
-          style="background-image: url('../static/images/stretch.jpg')"
-        >
+        <div class="background">
           <h1 class="title">Recovery Lab</h1>
         </div>
       </header>
@@ -33,10 +36,10 @@
       <section class="stretch">
         <!--Search Input-->
         <div class="search">
-          <label for="search">Search Users</label>
           <input
             type="search"
             id="search"
+            placeholder="SEARCH MUSCLE GROUP"
             onkeyup="user_search()"
             onclick="clicked()"
           />
@@ -74,11 +77,6 @@
             <a href="muscle-group=abdominals">Abdominals</a>
           </div>
         </div>
-
-        <!--Figure-->
-        <div class="figure">
-          <img src="" alt="Human Muscle Figure" />
-        </div>
       </section>
     </div>
   </body>
@@ -96,11 +94,28 @@
       vertical-align: center;
     }*/
 
+    body {
+      font-family: "Anek Latin", sans-serif;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      vertical-align: baseline;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 4vw;
+    }
+
+    header {
+      right: 0;
+      left: 0;
+    }
+
     .background {
-      height: 50vh;
-      width: 98.8vw;
-      margin-top: -2%;
-      margin-left: -0.5%;
+      /*background-size: cover;*/
+      /*background-position-y: 60%;*/
+      height: 30vh;
     }
 
     .title {
@@ -111,10 +126,13 @@
 
     .about {
       text-align: center;
-      border-style: solid;
-      border-color: blue;
       margin-left: 3rem;
       margin-right: 3rem;
+      padding: 1em;
+    }
+
+    .stretch {
+      padding: 1.5em;
     }
 
     .search {
@@ -126,10 +144,17 @@
 
     input {
       font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.1rem;
+    }
+    input:placeholder-shown {
+      font-style: italic;
+      font-size: 0.9rem;
     }
 
     .results {
       display: grid;
+      list-style: none;
     }
 
     .result {
@@ -145,10 +170,6 @@
     }
     .result a:hover {
       background: rgb(170, 170, 170);
-    }
-
-    .figure {
-      margin-top: 300px;
     } /*# sourceMappingURL=home.css.map */
   </style>
 </html>
