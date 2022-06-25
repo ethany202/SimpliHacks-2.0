@@ -1,9 +1,12 @@
 var click = false;
 function clicked() {
     click = true;
+    console.log(click);
 }
 
+document.body.addEventListener("click", released);
 function released() {
+    console.log(click);
     if (click) {
         let result = document.getElementsByClassName('result');
         let data = [].map.call(result, element => element.textContent);
