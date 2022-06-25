@@ -71,7 +71,6 @@ def parse_muscles(rows):
         except Exception as e:
             stretchName=stretchName
         arrTemplate.append(stretchName)
-    print(arrTemplate)
     return arrTemplate
 
 if __name__ == "__main__":
