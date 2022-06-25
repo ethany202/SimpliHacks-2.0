@@ -38,7 +38,12 @@ def get_stretches(group):
 
     stretches_lst=parse_rows(viable_stretches)
     stretch_names=parse_muscles(muscles)
-    return render_template("content.html", names=stretch_names, stretchesArr=stretches_lst)
+
+    try:
+        group=group.replace("_"," ")
+    except Exception as e:
+        print(e)
+    return render_template("content.html", muscle_group=str(group).upper(), names=stretch_names, stretchesArr=stretches_lst)
 
 def parse_rows(rows):
     arrTemplate=[]
