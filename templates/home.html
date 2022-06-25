@@ -12,15 +12,21 @@
     <div class="container" onclick="released()">
       <!--Header-->
       <header>
-        <h1>Website Name</h1>
+        <div
+          class="background"
+          style="background-image: url('../static/images/stretch.jpg')"
+        >
+          <h1 class="title">Recovery Lab</h1>
+        </div>
       </header>
 
       <!--About Us-->
       <section class="about">
         <h2>About Us</h2>
         <p>
-          Built by a team of three, Recovery Lab is a website letting users search for stretches to exercise certain muscle groups to keep them healthy, prevent future injuries
-          and handle soreness.
+          Built by a team of three, Recovery Lab is a website letting users
+          search for stretches to exercise certain muscle groups to keep them
+          healthy, prevent future injuries and handle soreness.
         </p>
       </section>
 
@@ -41,15 +47,33 @@
         <div class="results">
           <div class="result"><a href="muscle-group=chest">Chest</a></div>
           <div class="result"><a href="muscle-group=neck">Neck</a></div>
-          <div class="result"><a href="muscle-group=lower_back">Lower Back</a></div>
-          <div class="result"><a href="muscle-group=upper_arms">Upper Arms</a></div>
-          <div class="result"><a href="muscle-group=lower_arms">Lower Arms</a></div>
-          <div class="result"><a href="muscle-group=trapezius">Trapezius</a></div>
-          <div class="result"><a href="muscle-group=latissimus_dorsi">Latissimus Dorsi</a></div>
-          <div class="result"><a href="muscle-group=gluteal_muscles">Gluteal Muscles</a></div>
-          <div class="result"><a href="muscle-group=upper_legs">Upper Legs</a></div>
-          <div class="result"><a href="muscle-group=lower_legs">Lower Legs</a></div>
-          <div class="result"><a href="muscle-group=abdominals">Abdominals</a></div>
+          <div class="result">
+            <a href="muscle-group=lower_back">Lower Back</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=upper_arms">Upper Arms</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=lower_arms">Lower Arms</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=trapezius">Trapezius</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=latissimus_dorsi">Latissimus Dorsi</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=gluteal_muscles">Gluteal Muscles</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=upper_legs">Upper Legs</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=lower_legs">Lower Legs</a>
+          </div>
+          <div class="result">
+            <a href="muscle-group=abdominals">Abdominals</a>
+          </div>
         </div>
 
         <!--Figure-->
@@ -60,15 +84,30 @@
     </div>
   </body>
   <style>
+    /*
     header {
+      color: black;
       text-align: center;
       height: 50vh;
       border-style: solid;
-      margin-left: 0;
-      margin-right: 0;
+      background-image: url(images/stretch.jpg);
     }
     header h1 {
+      color: black;
       vertical-align: center;
+    }*/
+
+    .background {
+      height: 50vh;
+      width: 98.8vw;
+      margin-top: -2%;
+      margin-left: -0.5%;
+    }
+
+    .title {
+      padding-top: 50px;
+      color: black;
+      text-align: center;
     }
 
     .about {
@@ -111,6 +150,6 @@
 
     .figure {
       margin-top: 300px;
-    }/*# sourceMappingURL=home.css.map */
+    } /*# sourceMappingURL=home.css.map */
   </style>
 </html>
