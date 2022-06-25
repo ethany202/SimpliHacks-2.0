@@ -42,7 +42,6 @@ class RetrieveData():
     def check_muscles(self, muscle_group):
         try:
             select_stmt = "SELECT muscle FROM muscle_groups WHERE group_name IN ('" +str(muscle_group)+"')"
-            print(select_stmt)
             cursor = self.connection.cursor()
             cursor.execute(select_stmt)
             rows = cursor.fetchall()

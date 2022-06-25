@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recovery Lab | {{muscle_group}}</title>
     <script>
         var stretchNames= {{names | tojson}}
         var muscleStretches = {{stretchesArr | tojson }}
+        var info=document.getElementById("info")
 
         console.log(muscleStretches)
 
@@ -16,14 +17,53 @@
                 console.log(muscleStretches[i])
                 let bulletPoint=document.createElement("li")
                 bulletPoint.innerText=muscleStretches[i]
-                document.body.appendChild(bulletPoint)
-                // Append image of stretch
+
+                var info=document.getElementById("info")
+                info.appendChild(bulletPoint)
+                // Append image of stretch (let stretchImg=)
+
+                //let stretchImg=document.createElement("div")
+                //stretchImg.style.backgroundImage="url('../static/pictures/"+stretchNames[i]+".png')"
+
             }
         }
 
+        function getImageSizes(){
+
+        }
+
+        function returnHome(){
+            window.location.href="home"
+        }
     </script>
 </head>
 <body onload="populateContent()">
-    
+    <div id="page">
+        <h1> <span>{{muscle_group}}</span></h1>
+        <div>
+          <span>
+            <span id="info">details</span>
+          </span>
+        </div>
+      </div>
+    <div id="back-button">
+        <button onclick="returnHome()">HOME</button>
+    </div>
 </body>
+<style>
+    #page {
+      width:90%;
+      margin:auto;
+      border:none;
+      padding:20px;
+      /* text-align:center; */
+    }
+    h1{
+      margin-bottom:10%;
+    }
+
+    #back-button{
+        text-align: center;
+    }
+  </style>
 </html>
